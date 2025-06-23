@@ -1,0 +1,157 @@
+/* Main Container */
+.todo-container {
+  max-width: 1550px;
+  margin: auto;
+  padding: 30px;
+  background-color: #efdbdb;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.todo-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Form Layout: 4 Fields in Row */
+.todo-form {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.todo-form input[type="text"],
+.todo-form input[type="date"],
+.todo-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo-form button {
+  padding: 10px 20px;
+  background-color: #0fb330;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.todo-form button:hover {
+  background-color: #2980b9;
+}
+
+/* SearchBar */
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+/* Task Grid Layout: View | Task | Date | Priority | Delete */
+.task-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1.5fr 1.2fr 1fr;
+  gap: 15px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Grid Headers */
+.task-header {
+  font-weight: bold;
+  padding: 12px;
+  background-color: #dcdde1;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Task Row Cell */
+.task-cell {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+/* Priority Badge Styles */
+.priority-badge {
+  padding: 9px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+}
+
+.priority-badge.low {
+  background-color: #27ae60;
+}
+
+.priority-badge.normal {
+  background-color: #f39c12;
+}
+
+.priority-badge.high {
+  background-color: #e74c3c;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 8px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* View Button */
+.view-btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  background-color: #8e44ad;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: #732d91;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .todo-form {
+    grid-template-columns: 1fr;
+  }
+
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-header,
+  .task-cell {
+    text-align: left;
+  }
+}
